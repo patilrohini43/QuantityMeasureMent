@@ -6,14 +6,17 @@ public class Converion {
 
         Feet {
             public double convertUnits(double input) {
-                System.out.println(input);
                 return input * 12;
             }
         },
         Yard {
             public double convertUnits(double input) {
-                System.out.println(input);
                 return input * 3 * 12;
+            }
+        },
+        Inch {
+            public double convertUnits(double input) {
+                return input ;
             }
         };
 
