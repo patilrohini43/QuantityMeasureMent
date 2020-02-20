@@ -53,8 +53,18 @@ public class Converion {
             public double convertUnits(double input) {
                 return input * 1000;
             }
+        },
+        Celsius {
+            public double convertUnits(double input) {
+                return input;
+            }
+        },
+        Fahrenheit{
+            public double convertUnits(double input) {
+               double F=(input - 32) / 1.8;
+                return F;
+            }
         };
-
         public double convertUnits(double value) {
             return 0;
         }

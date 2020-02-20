@@ -141,4 +141,12 @@ public class QuantityMeasureTest {
         int check=value.addition(value1);
         Assert.assertEquals(1001,check);
     }
+
+    @Test
+    public void givenFahrenheitTempratureEqualCelsius_shouldBeReturnTrue() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Fahrenheit,212F);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Celsius,100);
+        boolean check=value.covertFeetToYard(value1);
+        Assert.assertTrue(check);
+    }
 }
