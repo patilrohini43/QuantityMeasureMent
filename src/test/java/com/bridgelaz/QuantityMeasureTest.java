@@ -85,4 +85,20 @@ public class QuantityMeasureTest {
         int  check=value.addition(value1);
         Assert.assertEquals(3,check);
     }
+
+    @Test
+    public void givenOneGallonAndLiters_shouldBeReturntrue() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Gallon,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Liters,3.78);
+        boolean check=value.covertFeetToYard(value1);
+        Assert.assertTrue(check);
+    }
+
+    @Test
+    public void givenOneLitersAnd1000Ml_shouldBeReturntrue() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Liters,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Ml,1000);
+        boolean check=value.covertFeetToYard(value1);
+        Assert.assertTrue(check);
+    }
 }

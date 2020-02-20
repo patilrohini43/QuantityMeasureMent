@@ -23,6 +23,21 @@ public class Converion {
             public double convertUnits(double input) {
                 return input;
             }
+        },
+        Gallon {
+            public double convertUnits(double input) {
+                return input * 3.78;
+            }
+        },
+        Liters{
+            public double convertUnits(double input) {
+                return input;
+            }
+        },
+        Ml {
+            public double convertUnits(double input){
+                return input / 1000;
+            }
         };
 
         public double convertUnits(double value) {
