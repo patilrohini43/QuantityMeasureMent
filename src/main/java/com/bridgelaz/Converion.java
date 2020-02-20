@@ -14,9 +14,14 @@ public class Converion {
                 return input * 3 * 12;
             }
         },
+        Centimeters {
+            public double convertUnits(double input) {
+                return input / 2.54;
+            }
+        },
         Inch {
             public double convertUnits(double input) {
-                return input ;
+                return input;
             }
         };
 

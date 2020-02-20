@@ -45,4 +45,12 @@ public class QuantityMeasureTest {
         boolean check=value.covertFeetToYard(value1);
         Assert.assertTrue(check);
     }
+
+    @Test
+    public void givenTwoInchToFiveCentimeters_shouldBeReturnTrue() {
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Inch,2);
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Centimeters,5.08);
+        boolean check=value.covertFeetToYard(value1);
+        Assert.assertTrue(check);
+    }
 }
