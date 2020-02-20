@@ -53,4 +53,36 @@ public class QuantityMeasureTest {
         boolean check=value.covertFeetToYard(value1);
         Assert.assertTrue(check);
     }
+
+    @Test
+    public void givenTwoInchAddTwoInch_shouldBeReturnTrue() {
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Inch,2);
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Inch,2);
+        int  check=value.addition(value1);
+        Assert.assertEquals(4,check);
+    }
+
+    @Test
+    public void givenOneFtAddTwoInch_shouldBeReturnTrue() {
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Feet,1);
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Inch,2);
+        int  check=value.addition(value1);
+        Assert.assertEquals(14,check);
+    }
+
+    @Test
+    public void givenOneFtAddOneFt_shouldBeReturnTrue() {
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Feet,1);
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Feet,1);
+        int  check=value.addition(value1);
+        Assert.assertEquals(24,check);
+    }
+
+    @Test
+    public void givenTwoInchAddTwo_FiveCentimeters_shouldBeReturnTrue() {
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Inch,2);
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Centimeters,2.6);
+        int  check=value.addition(value1);
+        Assert.assertEquals(3,check);
+    }
 }

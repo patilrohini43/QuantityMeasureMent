@@ -4,6 +4,7 @@ public class QuantityMeasure {
 
     private final Converion.Convertor unit;
     private final double value;
+    public Object addition;
 
     public QuantityMeasure(Converion.Convertor unitValue, double input) {
         this.unit=unitValue;
@@ -14,6 +15,13 @@ public class QuantityMeasure {
         Double result=this.unit.convertUnits(this.value);
         Double result1=quantityMeasure.unit.convertUnits(quantityMeasure.value);
         return result.equals(result1);
+    }
+
+    public int addition(QuantityMeasure quantityMeasure) {
+        Double result=this.unit.convertUnits(this.value);
+        Double result1=quantityMeasure.unit.convertUnits(quantityMeasure.value);
+        System.out.println("sasa"+result+"sdddd+"+result1);
+        return (int) (result + result1);
     }
 
 }
