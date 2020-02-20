@@ -20,7 +20,6 @@ public class QuantityMeasure {
     public int addition(QuantityMeasure quantityMeasure) {
         Double result=this.unit.convertUnits(this.value);
         Double result1=quantityMeasure.unit.convertUnits(quantityMeasure.value);
-        System.out.println("sasa"+result+"sdddd+"+result1);
         return (int) (result + result1);
     }
 

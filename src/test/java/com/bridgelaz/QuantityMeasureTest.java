@@ -101,4 +101,44 @@ public class QuantityMeasureTest {
         boolean check=value.covertFeetToYard(value1);
         Assert.assertTrue(check);
     }
+
+    @Test
+    public void givenOneGallonAndLiters_shouldBeReturnSeven() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Gallon,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Liters,3.78);
+        int  check=value.addition(value1);
+        Assert.assertEquals(7,check);
+    }
+
+    @Test
+    public void givenOneLitersAnd1000Ml_shouldBeReturnTwoLiters() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Liters,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Ml,1000);
+        int check=value.addition(value1);
+        Assert.assertEquals(2,check);
+    }
+
+    @Test
+    public void givenOneKgsAndThousnadGm_shouldBeReturntrue() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Kg,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Gram,1000);
+        boolean check=value.covertFeetToYard(value1);
+        Assert.assertTrue(check);
+    }
+
+    @Test
+    public void givenOneTonneAndThousnadkg_shouldBeReturntrue() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Tonne,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Kg,1000);
+        boolean check=value.covertFeetToYard(value1);
+        Assert.assertTrue(check);
+    }
+
+    @Test
+    public void givenOneTonneAndThoundGm_shouldBeReturn101() {
+        QuantityMeasure value = new QuantityMeasure(Converion.Convertor.Tonne,1);
+        QuantityMeasure value1 = new QuantityMeasure(Converion.Convertor.Gram,1000);
+        int check=value.addition(value1);
+        Assert.assertEquals(1001,check);
+    }
 }

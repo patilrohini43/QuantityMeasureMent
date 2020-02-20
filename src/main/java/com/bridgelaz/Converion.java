@@ -38,6 +38,21 @@ public class Converion {
             public double convertUnits(double input){
                 return input / 1000;
             }
+        },
+        Kg{
+            public double convertUnits(double input) {
+                return input;
+            }
+        },
+        Gram{
+            public double convertUnits(double input) {
+                return input / 1000;
+            }
+        },
+        Tonne{
+            public double convertUnits(double input) {
+                return input * 1000;
+            }
         };
 
         public double convertUnits(double value) {
